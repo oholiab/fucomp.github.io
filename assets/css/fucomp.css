@@ -1,0 +1,58 @@
+.Post {
+  font-family: helvetica, sans-serif;
+  letter-spacing: 1px;
+  line-height: 150%;
+  padding-left: 52%;
+  padding-right: 2%;
+  position: relative;
+}
+
+.Post p {
+  margin-bottom: 20px;
+}
+
+.Post-imageContainer {
+  background: pink;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 50vw;
+}
+
+.Post-title {
+  background: rgba(0, 0, 0, 1);
+  border-radius: 2px;
+  color: white;
+  font-size: 400%;
+  font-weight: 700;
+  left: 5%;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  max-width: 90%;
+  letter-spacing: 1px;
+  line-height: 75%;
+  padding-top: 3px;
+  position: relative;
+  text-transform: uppercase;
+  transform: rotate(-1.1deg);
+  z-index: 1;
+}
+
+.Post-subtitle {
+  background: rgba(1, 1, 1, 1);
+  color: white;
+  left: 5%;
+  max-width: calc(90% - 40px);
+  padding: 20px;
+  position: relative;
+  transform: rotate(1.1deg);
+  z-index: 1;
+}
+
+.Post-image {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}

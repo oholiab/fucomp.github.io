@@ -18,9 +18,17 @@ email: srslytho@fuckyou.computer
 description: > # this means to ignore newlines until "baseurl:"
   Treat your computer like the bastard it is
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://fucomp.github.io/" # the base hostname & protocol for your site
-twitter_username: 
+url: "http://127.0.0.1:4000/" # the base hostname & protocol for your site
+twitter_username: fuckyoucomputer
 github_username: fucomp
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
 
 # Build settings
 markdown: kramdown
