@@ -16,7 +16,7 @@ window.onload = function() {
         node.removeChild(child);
         n --;
       }
-      else if(child.nodeType === 1)
+      else if(child.nodeType === 1 && (!child.tagName.toLowerCase() === "code"))
       {
         clean(child);
       }
