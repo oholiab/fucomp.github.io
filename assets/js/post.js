@@ -1,6 +1,9 @@
 window.onload = function() {
   var doc = document;
 
+  // JS… get in the sea
+  // Sensible precautions courtesy of James Edwards
+  // https://www.sitepoint.com/removing-useless-nodes-from-the-dom/
   function clean(node)
   {
     for(var n = 0; n < node.childNodes.length; n ++)
@@ -16,7 +19,9 @@ window.onload = function() {
         node.removeChild(child);
         n --;
       }
-      else if(child.nodeType === 1 && (!child.tagName.toLowerCase() === "code"))
+      else if(
+        child.nodeType === 1 &&
+        (!child.tagName.toLowerCase() === "code"))
       {
         clean(child);
       }
