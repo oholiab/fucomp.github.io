@@ -1,5 +1,5 @@
 .Post {
-  font-family: helvetica, sans-serif;
+  font-family: "droid_sansregular";
   letter-spacing: 1px;
   line-height: 150%;
   padding-left: 52%;
@@ -7,8 +7,99 @@
   position: relative;
 }
 
+.Post header {
+  display: none;
+}
+
 .Post p {
   margin-bottom: 20px;
+}
+
+.Post b,
+.Post strong {
+  font-family: "droid_sansbold";
+}
+
+.Post code {
+  background: #282c34;
+  color: white;
+  display: block;
+  font-family: "droid_sans_monoregular";
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  white-space: initial;
+}
+
+.Post code span {
+  display: inline-block;
+}
+
+.Post code .o {
+  color: #4eadbd;
+}
+
+.Post code .nb {
+  color: #e5c064;
+}
+
+.Post code .nx,
+.Post code .sr,
+.Post code .err {
+  color: #61afef;
+}
+
+.Post code .kd {
+  color: #c678dd;
+}
+
+.Post code .s2 {
+  color: #98be65;
+}
+
+.Post div[class^="language-"] {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.Post div[class^="language-"]::before {
+  background-color: black;
+  color: white;
+  font-family: "droid_sans_monoregular";
+  left: -5px;
+  padding: 2px 7px;
+  position: absolute;
+  top: -5px;
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+
+.Post div[class^="language-"] code {
+  margin-bottom: 0;
+}
+
+.Post .language-bash::before {
+  content: "bash";
+}
+
+.Post .language-python::before {
+  content: "python";
+}
+
+.Post .language-css::before {
+  content: "css";
+}
+
+.Post .language-html::before {
+  content: "html";
+}
+
+.Post .language-javascript::before {
+  content: "javascript";
+}
+
+.Post .language-js::before {
+  content: "js";
 }
 
 .Post-imageContainer {
@@ -25,8 +116,9 @@
   background: rgba(0, 0, 0, 1);
   border-radius: 2px;
   color: white;
+  /*font-family: "kankinregular";*/
   font-size: 400%;
-  font-weight: 700;
+  font-weight: 100;
   left: 5%;
   margin-top: 15%;
   margin-bottom: 15%;
@@ -51,8 +143,16 @@
   z-index: 1;
 }
 
+.Post-subtitle p:last-child {
+  margin-bottom: 0;
+}
+
 .Post-image {
   height: 100vh;
   position: absolute;
   top: 0;
+}
+
+.Post footer {
+  display: none;
 }
