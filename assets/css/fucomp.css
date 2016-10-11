@@ -1,14 +1,17 @@
+/* default styles */
 .Post {
   font-family: "droid_sansregular";
   letter-spacing: 1px;
   line-height: 150%;
-  padding-left: 52%;
-  padding-right: 2%;
-  position: relative;
 }
 
-.Post header {
-  display: none;
+.Post-title {
+  color: white;
+  font-size: 400%;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 2;
 }
 
 .Post p {
@@ -20,6 +23,129 @@
   font-family: "droid_sansbold";
 }
 
+.Post header {
+  display: none;
+}
+
+.Post > blockquote { /* I don't like doing this but needs must */
+  background: #efefef;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+.Post > blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.Post footer {
+  display: none;
+}
+
+/* desktop styles */
+@media (min-width: 970px) {
+
+  .Post {
+    padding-left: 52%;
+    padding-right: 2%;
+    position: relative;
+  }
+
+  .Post-imageContainer {
+    background: #666;
+    height: 100vh;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 50vw;
+  }
+
+  .Post-title {
+    left: 5%;
+    line-height: 80%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    max-width: 90%;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    position: relative;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+    transform: rotate(-1.1deg);
+  }
+
+  .Post-title::before {
+    background: rgba(0, 0, 0, 1);
+    content: "";
+    border-radius: 2px;
+    bottom: 10px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    transform: rotate(3deg);
+    z-index: -1;
+  }
+
+  .Post-subtitle {
+    background: rgba(1, 1, 1, 1);
+    color: white;
+    left: 5%;
+    max-width: calc(90% - 40px);
+    padding: 20px;
+    position: relative;
+    transform: rotate(1.1deg);
+    z-index: 1;
+  }
+
+  .Post-subtitle p:last-child {
+    margin-bottom: 0;
+  }
+
+  .Post-image {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .Post {
+    padding: 20px;
+  }
+
+  .Post-imageContainer {
+    background-color: #efefef;
+    height: 100vh;
+    margin: -20px -20px 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .Post-image {
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .Post-title {
+    font-size: 200%;
+    position: relative;
+    text-align: center;
+  }
+
+  .Post-subtitle {
+    position: relative;
+    z-index: 1;
+  }
+
+}
+
+/* code styling */
 .Post code {
   background: #282c34;
   color: white;
@@ -28,11 +154,7 @@
   margin-bottom: 20px;
   padding: 20px;
   position: relative;
-  white-space: initial;
-}
-
-.Post code span {
-  display: inline-block;
+  white-space: pre;
 }
 
 .Post code .o {
@@ -100,59 +222,4 @@
 
 .Post .language-js::before {
   content: "js";
-}
-
-.Post-imageContainer {
-  background: pink;
-  height: 100vh;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 50vw;
-}
-
-.Post-title {
-  background: rgba(0, 0, 0, 1);
-  border-radius: 2px;
-  color: white;
-  /*font-family: "kankinregular";*/
-  font-size: 400%;
-  font-weight: 100;
-  left: 5%;
-  margin-top: 15%;
-  margin-bottom: 15%;
-  max-width: 90%;
-  letter-spacing: 1px;
-  line-height: 75%;
-  padding-top: 3px;
-  position: relative;
-  text-transform: uppercase;
-  transform: rotate(-1.1deg);
-  z-index: 1;
-}
-
-.Post-subtitle {
-  background: rgba(1, 1, 1, 1);
-  color: white;
-  left: 5%;
-  max-width: calc(90% - 40px);
-  padding: 20px;
-  position: relative;
-  transform: rotate(1.1deg);
-  z-index: 1;
-}
-
-.Post-subtitle p:last-child {
-  margin-bottom: 0;
-}
-
-.Post-image {
-  height: 100vh;
-  position: absolute;
-  top: 0;
-}
-
-.Post footer {
-  display: none;
 }
