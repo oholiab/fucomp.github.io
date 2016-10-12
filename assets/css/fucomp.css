@@ -66,14 +66,59 @@
   }
 
   .Post-title {
-    font-size: 200%;
+    font-family: "arreial";
+    font-size: 300%;
+    display: inline-block;
+    height: auto;
+    line-height: 80%;
+    margin-right: 40px;
+    padding: 0 20px;
     position: relative;
     text-align: center;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+    transform: rotate(-3deg) translateY(45vh);
+    vertical-align: top;
+    width: calc(50vw - 80px);
+  }
+
+  .Post-title::before {
+    background: rgba(0, 0, 0, 1);
+    border-radius: 2px;
+    bottom: 10px;
+    content: "";
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    transform: rotate(3deg);
+    z-index: -1;
   }
 
   .Post-subtitle {
+    color: #fff;
+    display: inline-block;;
     position: relative;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+    top: 0;
+    transform: translateY(45vh);
+    vertical-align: top;
+    width: calc(50% - 40px);
     z-index: 1;
+  }
+
+  .Post-subtitle::before {
+    background: rgba(0, 0, 0, 1);
+    border-radius: 2px;
+    bottom: -10px;
+    content: "";
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    transform: rotate(2deg);
+    z-index: -1;
   }
 
 }
@@ -99,6 +144,8 @@
   }
 
   .Post-title {
+    font-size: 400%;
+    height: auto;
     left: 5%;
     line-height: 80%;
     margin-top: 15%;
@@ -107,31 +154,38 @@
     padding-bottom: 3px;
     padding-top: 3px;
     position: relative;
-    text-shadow: 1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+    text-align: left;
     transform: rotate(-1.1deg);
   }
 
   .Post-title::before {
     background: rgba(0, 0, 0, 1);
-    content: "";
     border-radius: 2px;
     bottom: 10px;
+    content: "";
+    height: auto;
     left: 0;
     position: absolute;
-    right: 0;
+    right: 5%;
     top: 10px;
     transform: rotate(3deg);
     z-index: -1;
   }
 
+  .Post-title::after {
+    display: none;
+  }
+
   .Post-subtitle {
     background: rgba(1, 1, 1, 1);
     color: white;
+    display: block;
     left: 5%;
     max-width: calc(90% - 40px);
     padding: 20px;
     position: relative;
     transform: rotate(1.1deg);
+    width: auto;
     z-index: 1;
   }
 
