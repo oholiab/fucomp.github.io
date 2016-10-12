@@ -301,3 +301,7 @@
 .Post .language-js::before {
   content: "js";
 }
+
+.Post .language-markdown::before {
+  content: "markdown";
+}
