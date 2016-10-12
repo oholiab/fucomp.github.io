@@ -41,6 +41,43 @@
   display: none;
 }
 
+/* tablet */
+@media (min-width: 768px) {
+
+  .Post {
+    padding: 20px;
+  }
+
+  .Post-imageContainer {
+    background-color: #efefef;
+    height: 100vh;
+    margin: -20px -20px 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .Post-image {
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .Post-title {
+    font-size: 200%;
+    position: relative;
+    text-align: center;
+  }
+
+  .Post-subtitle {
+    position: relative;
+    z-index: 1;
+  }
+
+}
+
 /* desktop styles */
 @media (min-width: 970px) {
 
@@ -54,6 +91,7 @@
     background: #666;
     height: 100vh;
     left: 0;
+    margin: 0;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -109,56 +147,34 @@
 
 }
 
-@media (min-width: 768px) {
-
-  .Post {
-    padding: 20px;
-  }
-
-  .Post-imageContainer {
-    background-color: #efefef;
-    height: 100vh;
-    margin: -20px -20px 20px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .Post-image {
-    height: 100vh;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .Post-title {
-    font-size: 200%;
-    position: relative;
-    text-align: center;
-  }
-
-  .Post-subtitle {
-    position: relative;
-    z-index: 1;
-  }
-
-}
-
 /* code styling */
 .Post code {
   background: #282c34;
   color: white;
-  display: block;
+  display: inline-block;
   font-family: "droid_sans_monoregular";
-  margin-bottom: 20px;
-  padding: 20px;
   position: relative;
   white-space: pre;
 }
 
+.Post code .c1 {
+  color: #5b636c;
+}
+
 .Post code .o {
   color: #4eadbd;
+}
+
+.Post code .k {
+  color: #4eadbd;
+}
+
+.Post code .si {
+  color: #4eadbd;
+}
+
+.Post code .nf {
+  color: #4aa2f2;
 }
 
 .Post code .nb {
@@ -196,8 +212,16 @@
   z-index: 1;
 }
 
-.Post div[class^="language-"] code {
+.Post .highlight code {
+  display: block;
   margin-bottom: 0;
+  padding: 20px;
+}
+
+.Post div[class^="language-"] code {
+  display: block;
+  margin-bottom: 0;
+  padding: 20px;
 }
 
 .Post .language-bash::before {
