@@ -1,0 +1,307 @@
+/* default styles */
+.Post {
+  font-family: "droid_sansregular";
+  letter-spacing: 1px;
+  line-height: 150%;
+}
+
+.Post-title {
+  color: white;
+  font-size: 400%;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.Post p {
+  margin-bottom: 20px;
+}
+
+.Post b,
+.Post strong {
+  font-family: "droid_sansbold";
+}
+
+.Post header {
+  display: none;
+}
+
+.Post > blockquote { /* I don't like doing this but needs must */
+  background: #efefef;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+.Post > blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.Post footer {
+  display: none;
+}
+
+/* tablet */
+@media (min-width: 768px) {
+
+  .Post {
+    padding: 20px;
+  }
+
+  .Post-imageContainer {
+    background-color: #efefef;
+    height: 100vh;
+    margin: -20px -20px 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .Post-image {
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .Post-title {
+    font-family: "arreial";
+    font-size: 300%;
+    display: inline-block;
+    height: auto;
+    line-height: 80%;
+    margin-right: 40px;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+    transform: rotate(-3deg) translateY(45vh);
+    vertical-align: top;
+    width: calc(50vw - 80px);
+  }
+
+  .Post-title::before {
+    background: rgba(0, 0, 0, 1);
+    border-radius: 2px;
+    bottom: 10px;
+    content: "";
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    transform: rotate(3deg);
+    z-index: -1;
+  }
+
+  .Post-subtitle {
+    color: #fff;
+    display: inline-block;;
+    position: relative;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+    top: 0;
+    transform: translateY(45vh);
+    vertical-align: top;
+    width: calc(50% - 40px);
+    z-index: 1;
+  }
+
+  .Post-subtitle::before {
+    background: rgba(0, 0, 0, 1);
+    border-radius: 2px;
+    bottom: -10px;
+    content: "";
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    transform: rotate(2deg);
+    z-index: -1;
+  }
+
+}
+
+/* desktop styles */
+@media (min-width: 970px) {
+
+  .Post {
+    padding-left: 52%;
+    padding-right: 2%;
+    position: relative;
+  }
+
+  .Post-imageContainer {
+    background: #666;
+    height: 100vh;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 50vw;
+  }
+
+  .Post-title {
+    font-size: 400%;
+    height: auto;
+    left: 5%;
+    line-height: 80%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    max-width: 90%;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    position: relative;
+    text-align: left;
+    transform: rotate(-1.1deg);
+  }
+
+  .Post-title::before {
+    background: rgba(0, 0, 0, 1);
+    border-radius: 2px;
+    bottom: 10px;
+    content: "";
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 5%;
+    top: 10px;
+    transform: rotate(3deg);
+    z-index: -1;
+  }
+
+  .Post-title::after {
+    display: none;
+  }
+
+  .Post-subtitle {
+    background: rgba(1, 1, 1, 1);
+    color: white;
+    display: block;
+    left: 5%;
+    max-width: calc(90% - 40px);
+    padding: 20px;
+    position: relative;
+    transform: rotate(1.1deg);
+    width: auto;
+    z-index: 1;
+  }
+
+  .Post-subtitle p:last-child {
+    margin-bottom: 0;
+  }
+
+  .Post-image {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+  }
+
+}
+
+/* code styling */
+.Post code {
+  background: #282c34;
+  color: white;
+  display: inline-block;
+  font-family: "droid_sans_monoregular";
+  position: relative;
+  white-space: pre;
+}
+
+.Post code .c1 {
+  color: #5b636c;
+}
+
+.Post code .o {
+  color: #4eadbd;
+}
+
+.Post code .k {
+  color: #4eadbd;
+}
+
+.Post code .si {
+  color: #4eadbd;
+}
+
+.Post code .nf {
+  color: #4aa2f2;
+}
+
+.Post code .nb {
+  color: #e5c064;
+}
+
+.Post code .nx,
+.Post code .sr,
+.Post code .err {
+  color: #61afef;
+}
+
+.Post code .kd {
+  color: #c678dd;
+}
+
+.Post code .s2 {
+  color: #98be65;
+}
+
+.Post div[class^="language-"] {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.Post div[class^="language-"]::before {
+  background-color: black;
+  color: white;
+  font-family: "droid_sans_monoregular";
+  left: -5px;
+  padding: 2px 7px;
+  position: absolute;
+  top: -5px;
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+
+.Post .highlight code {
+  display: block;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+.Post div[class^="language-"] code {
+  display: block;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+.Post .language-bash::before {
+  content: "bash";
+}
+
+.Post .language-python::before {
+  content: "python";
+}
+
+.Post .language-css::before {
+  content: "css";
+}
+
+.Post .language-html::before {
+  content: "html";
+}
+
+.Post .language-javascript::before {
+  content: "javascript";
+}
+
+.Post .language-js::before {
+  content: "js";
+}
+
+.Post .language-markdown::before {
+  content: "markdown";
+}
