@@ -143,6 +143,34 @@
     width: 50vw;
   }
 
+  .Post-imageContainer::after {
+    color: white;
+    content: "<";
+    font-family: "arreial";
+    font-size: 400%;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    z-index: 2;
+  }
+
+  .Post-imageContainer::before {
+    background-color: black;
+    content: "";
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    transform: rotate(-3deg);
+    transition: transform .2s ease-in-out;
+    right: 5px;
+    width: 40px;
+    z-index: 1;
+  }
+
+  .Post-imageContainer:hover::before {
+    transform: rotate(0deg);
+  }
+
   .Post-title {
     font-size: 400%;
     height: auto;
