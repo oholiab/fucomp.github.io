@@ -128,7 +128,7 @@
 /* desktop styles */
 @media (min-width: 970px) {
 
-  .Post {
+  .PostImage {
     padding-left: 52%;
     padding-right: 2%;
     position: relative;
@@ -136,52 +136,57 @@
 
   /* desktop effects */
 
-  .Post {
+  .PostImage {
     transition: padding 1s ease-in-out;
   }
 
-  .Post.is-closed {
+  .PostImage.is-closed {
     padding-left: 6%;
   }
 
-  .Post-imageContainer {
+  .PostImage .Post-imageContainer {
     transition: width 1s ease-in-out;
   }
 
   /* post close hint */
-  .Post-imageContainer::before {
+  .PostImage .Post-imageContainer::before {
     transition: transform .2s ease-in-out;
   }
 
-  .Post-imageContainer:hover::before {
+  .PostImage .Post-imageContainer:hover::before {
     transform: rotate(0deg);
   }
   /* end post close hint */
 
-  .Post-imageContainer::after {
+  .PostImage .Post-imageContainer::after {
     transition: transform 1s ease-in-out;
   }
 
-  .Post.is-closed .Post-imageContainer::after {
+  .PostImage.is-closed .Post-imageContainer::after {
     transform: rotate(-180deg);
   }
 
-  .Post.is-closed .Post-imageContainer {
+  .PostImage.is-closed .Post-imageContainer {
     width: 4%;
   }
 
-  .Post.is-closed .Post-title {
-    font-size: 100%;
+  .PostImage.is-closed .Post-title {
+    font-size: 200%;
+    left: -22.2vw;
+    top: 50vh;
+    margin-bottom: 0;
+    margin-top: 0;
     transform: rotate(-90deg);
+    width: 90vh;
   }
 
-  .Post.is-closed .Post-subtitle {
+  .PostImage.is-closed .Post-subtitle {
     opacity: 0;
   }
 
   /* end desktop effects */
 
-  .Post-imageContainer {
+  .PostImage .Post-imageContainer {
     background: #666;
     height: 100vh;
     left: 0;
@@ -192,7 +197,7 @@
     width: 50vw;
   }
 
-  .Post-imageContainer::after {
+  .PostImage .Post-imageContainer::after {
     color: white;
     content: "<";
     font-family: "arreial";
@@ -200,10 +205,10 @@
     position: absolute;
     top: 30px;
     right: 10px;
-    z-index: 2;
+    z-index: 4;
   }
 
-  .Post-imageContainer::before {
+  .PostImage .Post-imageContainer::before {
     background-color: black;
     content: "";
     height: 40px;
@@ -212,14 +217,14 @@
     transform: rotate(-3deg);
     right: 5px;
     width: 40px;
-    z-index: 1;
+    z-index: 3;
   }
 
-  .Post-imageContainerInner {
+  .PostImage .Post-imageContainerInner {
     width: 50vw;
   }
 
-  .Post-title {
+  .PostImage .Post-title {
     font-size: 400%;
     height: auto;
     left: 5%;
@@ -231,12 +236,13 @@
     padding-top: 3px;
     position: relative;
     text-align: left;
+    top: 0;
     transform: rotate(-1.1deg);
     transition: all 1s ease-in-out;
 
   }
 
-  .Post-title::before {
+  .PostImage .Post-title::before {
     background: rgba(0, 0, 0, 1);
     border-radius: 2px;
     bottom: 10px;
@@ -250,11 +256,11 @@
     z-index: -1;
   }
 
-  .Post-title::after {
+  .PostImage .Post-title::after {
     display: none;
   }
 
-  .Post-subtitle {
+  .PostImage .Post-subtitle {
     background: rgba(1, 1, 1, 1);
     color: white;
     display: block;
@@ -268,11 +274,11 @@
     z-index: 1;
   }
 
-  .Post-subtitle p:last-child {
+  .PostImage .Post-subtitle p:last-child {
     margin-bottom: 0;
   }
 
-  .Post-image {
+  .PostImage .Post-image {
     height: 100vh;
     position: absolute;
     top: 0;
