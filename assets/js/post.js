@@ -49,6 +49,7 @@ window.onload = function() {
 
     if (masthead != null && masthead.tagName.toLowerCase() === "img") {
       subtitle.nextElementSibling.className = "Post-image";
+      doc.body.classList.add("PostImage");
       wrapperInner.innerHTML = wrapperInner.innerHTML + subtitle.nextElementSibling.outerHTML;
       subtitle.remove();
       masthead.remove();
