@@ -58,14 +58,27 @@ window.onload = function() {
     if (provideWrapper == true) {
       wrapper.innerHTML = wrapperInner.outerHTML;
       doc.body.insertBefore(wrapper, doc.body.firstChild);
-    }
 
-    var closeClass = "is-closed";
-    doc.body.onclick = function() {
-      if (this.classList.contains(closeClass)) {
-        this.classList.remove(closeClass);
-      } else {
-        this.classList.add(closeClass);
+      var closeClass = "is-closed";
+      var desktopBreakpoint = 970;
+      wrapper.onclick = function() {
+        if (window.innerWidth >= desktopBreakpoint) {
+          if (doc.body.classList.contains(closeClass)) {
+            doc.body.classList.remove(closeClass);
+          } else {
+            doc.body.classList.add(closeClass);
+          }
+        }
+        if (window.innerWidth < desktopBreakpoint) {
+          var i = 0;
+          var animateDown = setInterval(function() {
+            i = i + 5;
+            window.scrollTo(0, i);
+            if (i >= window.innerHeight) {
+              clearInterval(animateDown);
+            }
+          }, 10);
+        }
       }
     }
 

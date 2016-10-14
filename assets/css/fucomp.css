@@ -3,15 +3,68 @@
   font-family: "droid_sansregular";
   letter-spacing: 1px;
   line-height: 150%;
+  padding-top: 100vh;
 }
 
 .Post-title {
   color: white;
+  font-family: "arreial";
   font-size: 400%;
   font-weight: 100;
+  left: 5vw;
   letter-spacing: 1px;
+  line-height: 75%;
+  position: absolute;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+  top: 5vh;
+  transform: rotate(1deg);
+  width: 90vw;
   z-index: 2;
+}
+
+.Post-title:after {
+  background: rgba(0, 0, 0, 1);
+  content: "";
+  top: 5%;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+
+.Post-image {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
+}
+
+.Post-subtitle {
+  left: 5vw;
+  padding: 20px;
+  position: absolute;
+  top: 40vh;
+  width: calc(90vw - 40px);
+  z-index: 2;
+}
+
+.Post-subtitle::before {
+  background-color: #000;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+
+.Post-subtitle p {
+  color: #fff;
 }
 
 .Post p {
@@ -25,6 +78,46 @@
 
 .Post header {
   display: none;
+}
+
+.Post h2 {
+  font-family: "arreial";
+  font-size: 200%;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.Post h2:nth-of-type(odd) {
+  transform: rotate(2deg);
+}
+
+.Post h2:nth-of-type(even) {
+  transform: rotate(-2deg);
+}
+
+.Post h3 {
+  font-family: "arreial";
+  font-size: 150%;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.Post h3:nth-of-type(odd) {
+  transform: rotate(-1deg);
+}
+
+.Post h3:nth-of-type(odd) {
+  transform: rotate(1deg);
+}
+
+.Post ul {
+  list-style: disc;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .Post > blockquote { /* I don't like doing this but needs must */
@@ -54,16 +147,6 @@
     margin: -20px -20px 20px;
     overflow: hidden;
     position: relative;
-  }
-
-  .Post-image {
-    height: 100vh;
-    bottom: 0;
-    left: 0;
-    min-width: 50vw;
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 
   .Post-title {
@@ -96,17 +179,37 @@
     z-index: -1;
   }
 
+  .Post-title::after {
+    display: none;
+  }
+
+  .Post-image {
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    min-width: 100vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
   .Post-subtitle {
     color: #fff;
-    display: inline-block;;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 20px;
     position: relative;
     text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
     top: 0;
-    transform: translateY(45vh);
+    transform: translateY(40vh);
     vertical-align: top;
-    width: calc(50% - 40px);
+    width: calc(50% - 120px);
     white-space: pre-line;;
-    z-index: 1;
+    z-index: 2;
+  }
+
+  .Post-subtitle p {
+    transform: rotate(3deg);
   }
 
   .Post-subtitle::before {
@@ -119,7 +222,7 @@
     position: absolute;
     right: 0;
     top: -10px;
-    transform: rotate(2deg);
+    transform: rotate(1deg);
     z-index: -1;
   }
 
@@ -172,7 +275,7 @@
 
   .PostImage.is-closed .Post-title {
     font-size: 200%;
-    left: -22.2vw;
+    left: -22.3vw;
     top: 50vh;
     margin-bottom: 0;
     margin-top: 0;
@@ -263,13 +366,13 @@
   .PostImage .Post-subtitle {
     display: block;
     left: 5%;
-    max-width: calc(90% - 40px);
+    max-width: calc(90% - 60px);
     padding: 20px;
     position: relative;
     transform: rotate(1.1deg);
     transition: opacity 1s ease-in-out;
     width: auto;
-    z-index: 1;
+    z-index: 2;
   }
 
   .PostImage .Post-subtitle p {
