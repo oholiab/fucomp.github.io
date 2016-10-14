@@ -1,4 +1,5 @@
 window.onload = function() {
+
   var doc = document;
 
   var prepareStage = function() {
@@ -28,10 +29,12 @@ window.onload = function() {
 
     if (headers.length > 0) {
       var wrapper = doc.createElement("div");
+      var wrapperInner = doc.createElement("div");
       provideWrapper = true;
       wrapper.className = "Post-imageContainer";
+      wrapperInner.className = "Post-imageContainerInner";
       header.className = "Post-title";
-      wrapper.innerHTML = header.outerHTML;
+      wrapperInner.innerHTML = header.outerHTML;
       subtitle = header.nextElementSibling;
       header.remove();
     };
@@ -39,20 +42,30 @@ window.onload = function() {
     if (subtitle != null) {
       if (subtitle.tagName.toLowerCase() === "blockquote") {
         subtitle.className = "Post-subtitle";
-        wrapper.innerHTML = wrapper.innerHTML + subtitle.outerHTML;
+        wrapperInner.innerHTML = wrapperInner.innerHTML + subtitle.outerHTML;
         masthead = subtitle.nextElementSibling;
       };
     }
 
     if (masthead != null && masthead.tagName.toLowerCase() === "img") {
       subtitle.nextElementSibling.className = "Post-image";
-      wrapper.innerHTML = wrapper.innerHTML + subtitle.nextElementSibling.outerHTML;
+      wrapperInner.innerHTML = wrapperInner.innerHTML + subtitle.nextElementSibling.outerHTML;
       subtitle.remove();
       masthead.remove();
     }
 
     if (provideWrapper == true) {
+      wrapper.innerHTML = wrapperInner.outerHTML;
       doc.body.insertBefore(wrapper, doc.body.firstChild);
+    }
+
+    var closeClass = "is-closed";
+    doc.body.onclick = function() {
+      if (this.classList.contains(closeClass)) {
+        this.classList.remove(closeClass);
+      } else {
+        this.classList.add(closeClass);
+      }
     }
 
   }();

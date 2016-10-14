@@ -60,6 +60,7 @@
     height: 100vh;
     bottom: 0;
     left: 0;
+    min-width: 50vw;
     position: absolute;
     right: 0;
     top: 0;
@@ -104,6 +105,7 @@
     transform: translateY(45vh);
     vertical-align: top;
     width: calc(50% - 40px);
+    white-space: pre-line;;
     z-index: 1;
   }
 
@@ -132,6 +134,53 @@
     position: relative;
   }
 
+  /* desktop effects */
+
+  .Post {
+    transition: padding 1s ease-in-out;
+  }
+
+  .Post.is-closed {
+    padding-left: 6%;
+  }
+
+  .Post-imageContainer {
+    transition: width 1s ease-in-out;
+  }
+
+  /* post close hint */
+  .Post-imageContainer::before {
+    transition: transform .2s ease-in-out;
+  }
+
+  .Post-imageContainer:hover::before {
+    transform: rotate(0deg);
+  }
+  /* end post close hint */
+
+  .Post-imageContainer::after {
+    transition: transform 1s ease-in-out;
+  }
+
+  .Post.is-closed .Post-imageContainer::after {
+    transform: rotate(-180deg);
+  }
+
+  .Post.is-closed .Post-imageContainer {
+    width: 4%;
+  }
+
+  .Post.is-closed .Post-title {
+    font-size: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .Post.is-closed .Post-subtitle {
+    opacity: 0;
+  }
+
+  /* end desktop effects */
+
   .Post-imageContainer {
     background: #666;
     height: 100vh;
@@ -140,6 +189,33 @@
     overflow: hidden;
     position: fixed;
     top: 0;
+    width: 50vw;
+  }
+
+  .Post-imageContainer::after {
+    color: white;
+    content: "<";
+    font-family: "arreial";
+    font-size: 400%;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    z-index: 2;
+  }
+
+  .Post-imageContainer::before {
+    background-color: black;
+    content: "";
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    transform: rotate(-3deg);
+    right: 5px;
+    width: 40px;
+    z-index: 1;
+  }
+
+  .Post-imageContainerInner {
     width: 50vw;
   }
 
@@ -156,6 +232,8 @@
     position: relative;
     text-align: left;
     transform: rotate(-1.1deg);
+    transition: all 1s ease-in-out;
+
   }
 
   .Post-title::before {
@@ -185,6 +263,7 @@
     padding: 20px;
     position: relative;
     transform: rotate(1.1deg);
+    transition: opacity 1s ease-in-out;
     width: auto;
     z-index: 1;
   }
