@@ -261,8 +261,6 @@
   }
 
   .PostImage .Post-subtitle {
-    background: rgba(1, 1, 1, 1);
-    color: white;
     display: block;
     left: 5%;
     max-width: calc(90% - 40px);
@@ -272,6 +270,11 @@
     transition: opacity 1s ease-in-out;
     width: auto;
     z-index: 1;
+  }
+
+  .PostImage .Post-subtitle p {
+    background-color: transparent;
+    color: white;
   }
 
   .PostImage .Post-subtitle p:last-child {
