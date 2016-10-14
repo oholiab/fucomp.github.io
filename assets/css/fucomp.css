@@ -56,16 +56,6 @@
     position: relative;
   }
 
-  .Post-image {
-    height: 100vh;
-    bottom: 0;
-    left: 0;
-    min-width: 50vw;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
   .Post-title {
     font-family: "arreial";
     font-size: 300%;
@@ -96,17 +86,32 @@
     z-index: -1;
   }
 
+  .Post-image {
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    min-width: 100vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
   .Post-subtitle {
     color: #fff;
-    display: inline-block;;
+    display: inline-block;
+    padding: 20px;
     position: relative;
     text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
     top: 0;
-    transform: translateY(45vh);
+    transform: translateY(40vh);
     vertical-align: top;
-    width: calc(50% - 40px);
+    width: calc(50% - 80px);
     white-space: pre-line;;
     z-index: 1;
+  }
+
+  .Post-subtitle p {
+    transform: rotate(3deg);
   }
 
   .Post-subtitle::before {
@@ -172,7 +177,7 @@
 
   .PostImage.is-closed .Post-title {
     font-size: 200%;
-    left: -22.2vw;
+    left: -21.5vw;
     top: 50vh;
     margin-bottom: 0;
     margin-top: 0;

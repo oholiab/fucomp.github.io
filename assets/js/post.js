@@ -58,16 +58,17 @@ window.onload = function() {
     if (provideWrapper == true) {
       wrapper.innerHTML = wrapperInner.outerHTML;
       doc.body.insertBefore(wrapper, doc.body.firstChild);
-    }
 
-    var closeClass = "is-closed";
-    doc.body.onclick = function() {
-      if (this.classList.contains(closeClass)) {
-        this.classList.remove(closeClass);
-      } else {
-        this.classList.add(closeClass);
+      var closeClass = "is-closed";
+      wrapper.onclick = function() {
+        if (doc.body.classList.contains(closeClass)) {
+          doc.body.classList.remove(closeClass);
+        } else {
+          doc.body.classList.add(closeClass);
+        }
       }
     }
+
 
   }();
 
