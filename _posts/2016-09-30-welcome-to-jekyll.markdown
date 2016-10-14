@@ -5,14 +5,14 @@ date:   2016-09-30 11:33:58 +0100
 categories: infra jekyll update
 ---
 
-> So this is the inaugeral journey of the new format of fuckyou.computer using
+> So this is the inaugural journey of the new format of fuckyou.computer using
 > jekyll instead of wordpress! Whilst "fuck it; ship it" is an excellent
 > philosophy, there comes a time to fix your shit, and wordpress is indeed shit.
-> 
-> As pragmatism is also part of the fu!comp philosophy, I'm going to leave the
-> rest of the default jekyll first post here so that contributers can use it as a
+>
+> As pragmatism is also part of the FU:Comp philosophy, I'm going to leave the
+> rest of the default jekyll first post here so that contributors can use it as a
 > guideline :)
-> 
+>
 > ~ oholiab
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
@@ -28,6 +28,16 @@ end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
+
+Lolwat
+
+```ruby
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+```
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 

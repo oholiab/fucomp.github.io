@@ -1,0 +1,49 @@
+/* droid sans */
+@font-face {
+    font-family: 'droid_sansregular';
+    src: url('../fonts/DroidSans-webfont.eot');
+    src: url('../fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSans-webfont.woff') format('woff'),
+         url('../fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* droid sans bold */
+@font-face {
+  font-family: 'droid_sansbold';
+  src: url('../fonts/DroidSans-Bold-webfont.eot');
+  src: url('../fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DroidSans-Bold-webfont.woff') format('woff'),
+  url('../fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+  url('../fonts/DroidSans-Bold-webfont.svg#droid_sansbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* droid sans monospace */
+@font-face {
+    font-family: 'droid_sans_monoregular';
+    src: url('../fonts/DroidSansMono-webfont.eot');
+    src: url('../fonts/DroidSansMono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSansMono-webfont.woff') format('woff'),
+         url('../fonts/DroidSansMono-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSansMono-webfont.svg#droid_sans_monoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* arreial */
+@font-face {
+    font-family: 'arreial';
+    src: url('../fonts/arreial.eot');
+    src: url('../fonts/arreial.eot') format('embedded-opentype'),
+         url('../fonts/arreial.woff2') format('woff2'),
+         url('../fonts/arreial.woff') format('woff'),
+         url('../fonts/arreial.ttf') format('truetype'),
+         url('../fonts/arreial.svg#arreial') format('svg');
+}
