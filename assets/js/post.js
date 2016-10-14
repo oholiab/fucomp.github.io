@@ -60,15 +60,27 @@ window.onload = function() {
       doc.body.insertBefore(wrapper, doc.body.firstChild);
 
       var closeClass = "is-closed";
+      var desktopBreakpoint = 970;
       wrapper.onclick = function() {
-        if (doc.body.classList.contains(closeClass)) {
-          doc.body.classList.remove(closeClass);
-        } else {
-          doc.body.classList.add(closeClass);
+        if (window.innerWidth >= desktopBreakpoint) {
+          if (doc.body.classList.contains(closeClass)) {
+            doc.body.classList.remove(closeClass);
+          } else {
+            doc.body.classList.add(closeClass);
+          }
+        }
+        if (window.innerWidth < desktopBreakpoint) {
+          var i = 0;
+          var animateDown = setInterval(function() {
+            i = i + 5;
+            window.scrollTo(0, i);
+            if (i >= window.innerHeight) {
+              clearInterval(animateDown);
+            }
+          }, 10);
         }
       }
     }
-
 
   }();
 
