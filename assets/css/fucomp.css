@@ -6,6 +6,7 @@
 }
 
 .Post-image {
+  overflow-x: hidden;
   padding-top: 100vh;
 }
 
