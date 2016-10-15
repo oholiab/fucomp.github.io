@@ -135,6 +135,10 @@
   margin-bottom: 0;
 }
 
+.Post iframe {
+  margin-bottom: 20px;
+}
+
 .Post footer {
   display: none;
 }

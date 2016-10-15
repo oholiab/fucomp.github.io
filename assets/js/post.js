@@ -4,20 +4,46 @@ window.onload = function() {
 
   var prepareStage = function() {
 
-    var moveImagesUpDom = function(){
+    var moveImagesUpDom = function() {
       var images = doc.getElementsByTagName("img");
       if (images.length > 0) {
         i = images.length - 1;
         do{
           var image = images[i],
           parent = image.parentNode,
-          neighbour = parent.previousElementSibling;
+          neighbour = parent.previousElementSibling; // is this actually used?
           doc.body.insertBefore(image, parent);
           parent.remove();
         } while( i-- );
       }
     }(); // what does this do? I want my images to be at the root of the
          // document and easily hackable THANK YOU VERY MUCH computer
+
+    var parseVideos = function() { // step through the page and collect any
+                                   // paragraph called "youtube-video"
+                                   // convert it into an embedded object
+        var videos = doc.getElementsByClassName("youtube-video");
+        if (videos.length > 0) {
+          var vidsLen = videos.length;
+          var i = vidsLen - 1;
+          do{
+            var vidWrapper = doc.createElement("iframe"),
+                vidEl = videos[i],
+                vidUrl = vidEl.getElementsByTagName("a")[0].href;
+                vidUrlArr = vidUrl.split("/"),
+                vidUrlArrLen = vidUrlArr.length,
+                vidId = vidUrlArr[vidUrlArrLen-1];
+            vidWrapper.width = "560";
+            vidWrapper.height = "315";
+            vidWrapper.setAttribute("frameborder", "0");
+            vidWrapper.setAttribute("allowfullscreen","");
+            vidWrapper.src = "https://www.youtube.com/embed/" + vidId;
+            doc.body.insertBefore(vidWrapper, vidEl);
+            vidEl.remove();
+          } while( i-- );
+        }
+
+    }();
 
     var headers = doc.getElementsByTagName("h1"),
         header = headers[0], // only pick the first one from the page just in case
