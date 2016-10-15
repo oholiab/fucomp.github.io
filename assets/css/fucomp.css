@@ -3,6 +3,9 @@
   font-family: "droid_sansregular";
   letter-spacing: 1px;
   line-height: 150%;
+}
+
+.Post-image {
   padding-top: 100vh;
 }
 
