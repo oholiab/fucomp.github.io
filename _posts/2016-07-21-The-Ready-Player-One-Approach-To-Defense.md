@@ -3,12 +3,13 @@ layout: post
 title: The Ready Player One Approach to Defense
 date: 21-07-2016
 categories: vanity security thinks sci-fi
+author: HeadCrash
 ---
 # The Ready Player One Approach to Defense
 
 > What if computer emulation wasn't just about nostalgia? What if we could leverage the power of being olde and having knowledge of defunct hardware and software and legitimately put it to use today?
 
-![Rad!](https://grimmwa.re/files/retro-console.gif)
+![Rad!](http://media.fuckyou.computer/retro-console.gif)
 
 ## The Idea
 
