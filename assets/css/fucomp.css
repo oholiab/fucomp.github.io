@@ -5,9 +5,17 @@
   line-height: 150%;
 }
 
-.Post-image {
+.PostImage { /* this needs to be refactored to be .has-image to be BEM compliant */
   overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 100vh;
+}
+
+.Post-imageContainer {
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 .Post-title {
