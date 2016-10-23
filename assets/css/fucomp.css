@@ -327,10 +327,6 @@
     z-index: 3;
   }
 
-  .PostImage .Post-imageContainerInner {
-    width: 50vw;
-  }
-
   .PostImage .Post-title {
     font-size: 400%;
     height: auto;
@@ -346,7 +342,6 @@
     top: 0;
     transform: rotate(-1.1deg);
     transition: all 1s ease-in-out;
-
   }
 
   .PostImage .Post-title::before {

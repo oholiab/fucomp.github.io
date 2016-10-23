@@ -55,12 +55,10 @@ window.onload = function() {
 
     if (headers.length > 0) {
       var wrapper = doc.createElement("div");
-      var wrapperInner = doc.createElement("div");
       provideWrapper = true;
       wrapper.className = "Post-imageContainer";
-      wrapperInner.className = "Post-imageContainerInner";
       header.className = "Post-title";
-      wrapperInner.innerHTML = header.outerHTML;
+      wrapper.innerHTML = header.outerHTML;
       subtitle = header.nextElementSibling;
       header.remove();
     };
@@ -68,21 +66,22 @@ window.onload = function() {
     if (subtitle != null) {
       if (subtitle.tagName.toLowerCase() === "blockquote") {
         subtitle.className = "Post-subtitle";
-        wrapperInner.innerHTML = wrapperInner.innerHTML + subtitle.outerHTML;
+        wrapper.innerHTML = wrapper.innerHTML + subtitle.outerHTML;
         masthead = subtitle.nextElementSibling;
       };
     }
 
     if (masthead != null && masthead.tagName.toLowerCase() === "img") {
-      subtitle.nextElementSibling.className = "Post-image";
+      var img = subtitle.nextElementSibling;
+      var src = img.src;
       doc.body.classList.add("PostImage");
-      wrapperInner.innerHTML = wrapperInner.innerHTML + subtitle.nextElementSibling.outerHTML;
+      wrapper.setAttribute("style","background: url('" + src + "') center center no-repeat; background-size: cover;");
+      img.remove();
       subtitle.remove();
       masthead.remove();
     }
 
     if (provideWrapper == true) {
-      wrapper.innerHTML = wrapperInner.outerHTML;
       doc.body.insertBefore(wrapper, doc.body.firstChild);
 
       var closeClass = "is-closed";
