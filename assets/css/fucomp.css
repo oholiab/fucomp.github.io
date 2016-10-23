@@ -47,13 +47,6 @@
   z-index: -1;
 }
 
-.Post-image {
-  position: absolute;
-  height: 100vh;
-  top: 0;
-  z-index: 1;
-}
-
 .Post-subtitle {
   left: 5vw;
   padding: 20px;
@@ -202,16 +195,6 @@
 
   .Post-title::after {
     display: none;
-  }
-
-  .Post-image {
-    height: 100vh;
-    bottom: 0;
-    left: 0;
-    min-width: 100vw;
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 
   .Post-subtitle {
@@ -403,12 +386,6 @@
 
   .PostImage .Post-subtitle p:last-child {
     margin-bottom: 0;
-  }
-
-  .PostImage .Post-image {
-    height: 100vh;
-    position: absolute;
-    top: 0;
   }
 
 }
