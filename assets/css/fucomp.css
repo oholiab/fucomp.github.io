@@ -13,9 +13,11 @@
 }
 
 .Post-imageContainer {
+  height: 100vh;
   left: 0;
   position: absolute;
   top: 0;
+  width: 100vw;
 }
 
 .Post-title {
@@ -28,7 +30,10 @@
   line-height: 82%;
   position: absolute;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+  text-shadow: 1px 1px 1px black,
+               -1px -1px 1px black,
+               -1px 1px 1px black,
+               1px -1px 1px black;
   top: 5vh;
   transform: rotate(1deg);
   width: 90vw;
@@ -157,7 +162,6 @@
 
   .Post-imageContainer {
     background-color: #efefef;
-    height: 100vh;
     margin: -20px -20px 20px;
     overflow: hidden;
     position: relative;
@@ -170,11 +174,15 @@
     height: auto;
     line-height: 80%;
     margin-right: 40px;
+    margin-top: 40vh;
     padding: 0 20px;
     position: relative;
     text-align: center;
-    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
-    transform: rotate(-3deg) translateY(45vh);
+    text-shadow: 1px 1px 1px black,
+                 -1px -1px 1px black,
+                 -1px 1px 1px black,
+                 1px -1px 1px black;
+    transform: rotate(-3deg) translateY(-25%);
     vertical-align: top;
     width: calc(50vw - 80px);
   }
@@ -189,7 +197,7 @@
     position: absolute;
     right: 0;
     top: 10px;
-    transform: rotate(3deg);
+    transform: rotate(5deg);
     z-index: -1;
   }
 
@@ -201,11 +209,15 @@
     color: #fff;
     display: inline-block;
     margin-left: 20px;
+    margin-top: 45vh;
     padding: 20px;
     position: relative;
-    text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+    text-shadow: 1px 1px 1px black,
+                 -1px -1px 1px black,
+                 -1px 1px 1px black,
+                 1px -1px 1px black;
     top: 0;
-    transform: translateY(40vh);
+    transform: translateY(-25%);
     vertical-align: top;
     width: calc(50% - 120px);
     white-space: pre-line;;
@@ -213,7 +225,11 @@
   }
 
   .Post-subtitle p {
-    transform: rotate(3deg);
+    transform: rotate(2deg);
+  }
+
+  .Post-subtitle p:first-child {
+    margin-bottom: 0;
   }
 
   .Post-subtitle::before {
@@ -225,8 +241,7 @@
     left: 0;
     position: absolute;
     right: 0;
-    top: -10px;
-    transform: rotate(1deg);
+    transform: rotate(-1deg);
     z-index: -1;
   }
 
@@ -248,7 +263,7 @@
   }
 
   .PostImage.is-closed {
-    padding-left: 6%;
+    padding-left: 8%;
   }
 
   .PostImage .Post-imageContainer {
@@ -274,17 +289,19 @@
   }
 
   .PostImage.is-closed .Post-imageContainer {
-    width: 4%;
+    width: 6%;
   }
 
   .PostImage.is-closed .Post-title {
     font-size: 200%;
-    left: -22.3vw;
-    top: 50vh;
+    left: 0;
     margin-bottom: 0;
+    margin-left: 0;
     margin-top: 0;
-    transform: rotate(-90deg);
-    width: 90vh;
+    max-width: inherit;
+    top: 0;
+    transform: translateY(45vh) translateX(-48vh) rotate(-90deg);
+    width: 100vh;
   }
 
   .PostImage.is-closed .Post-subtitle {
@@ -295,7 +312,6 @@
 
   .PostImage .Post-imageContainer {
     background: #666;
-    height: 100vh;
     left: 0;
     margin: 0;
     overflow: hidden;
@@ -329,18 +345,10 @@
 
   .PostImage .Post-title {
     font-size: 400%;
-    height: auto;
-    left: 5%;
-    line-height: 80%;
-    margin-top: 15%;
-    margin-bottom: 15%;
-    max-width: 90%;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    position: relative;
+    margin-top: 0;
+    position: absolute;
     text-align: left;
-    top: 0;
-    transform: rotate(-1.1deg);
+    top: 20vh;
     transition: all 1s ease-in-out;
   }
 
@@ -365,10 +373,12 @@
   .PostImage .Post-subtitle {
     display: block;
     left: 5%;
+    margin-top: -40vh;
     max-width: calc(90% - 60px);
+    opacity: 1;
     padding: 20px;
     position: relative;
-    transform: rotate(1.1deg);
+    transform: translateY(100vh) rotate(1.1deg);
     transition: opacity 1s ease-in-out;
     width: auto;
     z-index: 2;
