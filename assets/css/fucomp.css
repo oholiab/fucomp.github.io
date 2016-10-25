@@ -345,7 +345,9 @@
 
   .PostImage .Post-title {
     font-size: 400%;
+    margin-right: 0;
     margin-top: 0;
+    max-width: calc(90% - 60px);
     position: absolute;
     text-align: left;
     top: 20vh;
@@ -372,9 +374,9 @@
 
   .PostImage .Post-subtitle {
     display: block;
-    left: 5%;
+    left: 7%;
     margin-top: -40vh;
-    max-width: calc(90% - 60px);
+    max-width: calc(90% - 90px);
     opacity: 1;
     padding: 20px;
     position: relative;
