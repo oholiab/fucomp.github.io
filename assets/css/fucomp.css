@@ -375,20 +375,26 @@
   .PostImage .Post-subtitle {
     display: block;
     left: 7%;
+    margin-bottom: 0;
     margin-top: -40vh;
     max-width: calc(90% - 90px);
     opacity: 1;
     padding: 20px;
     position: relative;
-    transform: translateY(100vh) rotate(1.1deg);
+    transform: translateY(100vh) rotate(0deg);
     transition: opacity 1s ease-in-out;
     width: auto;
     z-index: 2;
   }
 
+  .PostImage .Post-subtitle::before {
+    transform: rotate(-1deg);
+  }
+
   .PostImage .Post-subtitle p {
     background-color: transparent;
     color: white;
+    transform: rotate(1deg);
   }
 
   .PostImage .Post-subtitle p:last-child {
