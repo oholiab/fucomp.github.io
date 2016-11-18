@@ -14,7 +14,7 @@ categories: security
 
 ## What is the Snoopers Charter?
 
-The very Britishly named Snoopers Charter is a broad ranging and vaguely worded ~~set of rules~~ law that allows the Government and any of its security and intelligence agencies (their terms, not mine) access to a UK citizen's phone or computer with a warrant. Rather more worrying is the "Bulk Surveillance" option that they may opt for. They currently can't sweep that particular broad beam onto a private British citizen but they can train it on groups who they determine to be a risk to the UK, again via a warrant. The reason that this causes me concern is that although it's illegal for them to snoop on me personally unless I become a visible threat to the nation and its security, it doesn't preclude them from trading with other nations with broad ranging powers like the US' NSA for that data anyway.
+The very Britishly named Snoopers Charter is a broad ranging and vaguely worded ~~set of rules~~ law that allows the Government and any of its security and intelligence agencies (their terms, not mine) access to a UK citizen's phone or computer with a warrant. Rather more worrying is the "Bulk Surveillance" option that they may opt for. They currently can't sweep that particular broad beam onto a private British citizen but they can train it on groups who they determine to be a risk to the UK, again via a warrant. The reason that this causes me concern is that although it's illegal for them to snoop on me personally unless I become a visible threat to the nation and its security, it doesn't preclude them from trading with other nations with broad ranging powers like the US's NSA for that data anyway.
 
 Paranoid? Perhaps but with good reason, this has happened [before](http://www.theweek.co.uk/uk-news/62437/gchq-unlawfully-spied-on-uk-citizens-through-nsa).
 
@@ -28,8 +28,8 @@ Well apart from the violation of the individual's right to privacy as [outlined]
 
 * Always read the small print. I know we never do, nobody ever does. Start.
 * If you don't like the connotations, learn to say no and find an [alternative](https://alternativeto.net/).
+* That goes for your government too consider voting for your local [Pirate Party](http://www.pirateparty.org.uk/) or pro-privacy candidate
 * Use a VPN. Not just at home but also on your mobile devices. I recommend [NordVPN](https://www.nordvpn.com/).
 * Install [Pi-Hole](https://www.pi-hole.net/) on your home network and stop tracking and ads. Keep it updated.
 * Start using Signal by Whisper Systems. Tell all your friends and family, help them if they need to set it up.
 * If you like group chat consider switching from Slack to Semaphore.
-* Consider voting for your local [Pirate Party](http://www.pirateparty.org.uk/) or pro-privacy candidate
