@@ -39,9 +39,10 @@ Posts must contain the following Github Flavour Markdown:
 
 ```markdown
 ---
-layout: post <!-- unless you are actually adding a page please don't change the layout from post - it will most likely hinder the acceptance of the article -->
+layout: post <!-- unless you're adding a page which you probably aren't -->
 title: "Demo" <!-- The title -->
-date: 2016-10-05 22:01:20 +0100 <!-- the date -->
+date: 2016-10-05 22:01:20 +0100 <!-- the date in linux `date +"%Y-%M-%d %H:%m:%S %z"` format -->
+author: Me <!-- Name or handle -->
 categories: test <!-- A category or categories you'd like the post to appear in -->
 ---
 # A H1 level title at the top of the document

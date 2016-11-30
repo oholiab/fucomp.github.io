@@ -12,6 +12,7 @@ module JekyllHelpers
       layout: post
       title:  "#{title}"
       date:   #{date.strftime('%Y-%m-%d %H:%M:%S %z')}
+      author:
       categories:
       ---
     EOF
