@@ -11,7 +11,7 @@ vendor:
 serve:
 	bundle exec jekyll serve
 
-post:
+post: | vendor
 	bundle exec helpers post
 
 doc: helpers

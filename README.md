@@ -29,8 +29,11 @@ consistent standard applied to all editorial.
 
 ## Post Styling Guidelines - Provisional
 
-Because we are striving to keep the markdown as plain and clean as possible we may only have support for limited Markdown variants currently.
-We are relying on the kramdown engine for our HTML conversion so to ensure consistent design application. Subsequent acceptance of any submissions will be quite strict whilst we keep fixing our own ship.
+Because we are striving to keep the markdown as plain and clean as possible we
+may only have support for limited Markdown variants currently.  We are relying
+on the kramdown engine for our HTML conversion so to ensure consistent design
+application. Subsequent acceptance of any submissions will be quite strict
+whilst we keep fixing our own ship.
 
 Posts must contain the following Github Flavour Markdown:
 
@@ -47,6 +50,14 @@ categories: test <!-- A category or categories you'd like the post to appear in 
 
 After that you can pretty much do what you like with the post itself.
 ```
-We haven't tried too much of the other MD flavours yet but we will, as requirements become apparent, attempt to cover as many outcomes as possible.
+
+Alternatively you can generate a new post template by running `make post` and
+then edit the post that gets kicked out
+
+We haven't tried too much of the other MD flavours yet but we will, as
+requirements become apparent, attempt to cover as many outcomes as possible.
+
+Bonus points if you limit your markdown to 80 characters width so it's easy to
+read offline in a terminal!
 
 ###
