@@ -2,6 +2,7 @@
 layout: post
 title:  "FU!wordpress"
 date:   2016-09-30 11:33:58 +0100
+author: oholiab
 categories: infra jekyll update
 ---
 
