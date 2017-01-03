@@ -21,6 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fucomp.github.io/" # the base hostname & protocol for your site
 twitter_username: fuckyoucomputer
 github_username: fucomp
+font_server: "https://grimmwa.re/files/fonts"
 
 defaults:
   -

@@ -1,11 +1,14 @@
+---
+---
+
 /* droid sans */
 @font-face {
     font-family: 'droid_sansregular';
-    src: url('https://grimmwa.re/files/fonts/DroidSans-webfont.eot');
-    src: url('https://grimmwa.re/files/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://grimmwa.re/files/fonts/DroidSans-webfont.woff') format('woff'),
-         url('https://grimmwa.re/files/fonts/DroidSans-webfont.ttf') format('truetype'),
-         url('https://grimmwa.re/files/fonts/DroidSans-webfont.svg#droid_sansregular') format('svg');
+    src: url('{{ site.font_server }}/DroidSans-webfont.eot');
+    src: url('{{ site.font_server }}/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('{{ site.font_server }}/DroidSans-webfont.woff') format('woff'),
+         url('{{ site.font_server }}/DroidSans-webfont.ttf') format('truetype'),
+         url('{{ site.font_server }}/DroidSans-webfont.svg#droid_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -14,11 +17,11 @@
 /* droid sans bold */
 @font-face {
   font-family: 'droid_sansbold';
-  src: url('https://grimmwa.re/files/fonts/DroidSans-Bold-webfont.eot');
-  src: url('https://grimmwa.re/files/fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('https://grimmwa.re/files/fonts/DroidSans-Bold-webfont.woff') format('woff'),
-       url('https://grimmwa.re/files/fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
-       url('https://grimmwa.re/files/fonts/DroidSans-Bold-webfont.svg#droid_sansbold') format('svg');
+  src: url('{{ site.font_server }}/DroidSans-Bold-webfont.eot');
+  src: url('{{ site.font_server }}/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('{{ site.font_server }}/DroidSans-Bold-webfont.woff') format('woff'),
+       url('{{ site.font_server }}/DroidSans-Bold-webfont.ttf') format('truetype'),
+       url('{{ site.font_server }}/DroidSans-Bold-webfont.svg#droid_sansbold') format('svg');
   font-weight: normal;
   font-style: normal;
 
@@ -27,11 +30,11 @@
 /* droid sans monospace */
 @font-face {
     font-family: 'droid_sans_monoregular';
-    src: url('https://grimmwa.re/files/fonts/DroidSansMono-webfont.eot');
-    src: url('https://grimmwa.re/files/fonts/DroidSansMono-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://grimmwa.re/files/fonts/DroidSansMono-webfont.woff') format('woff'),
-         url('https://grimmwa.re/files/fonts/DroidSansMono-webfont.ttf') format('truetype'),
-         url('https://grimmwa.re/files/fonts/DroidSansMono-webfont.svg#droid_sans_monoregular') format('svg');
+    src: url('{{ site.font_server }}/DroidSansMono-webfont.eot');
+    src: url('{{ site.font_server }}/DroidSansMono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('{{ site.font_server }}/DroidSansMono-webfont.woff') format('woff'),
+         url('{{ site.font_server }}/DroidSansMono-webfont.ttf') format('truetype'),
+         url('{{ site.font_server }}/DroidSansMono-webfont.svg#droid_sans_monoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -40,10 +43,10 @@
 /* arreial */
 @font-face {
     font-family: 'arreial';
-    src: url('https://grimmwa.re/files/fonts/arreial.eot');
-    src: url('https://grimmwa.re/files/fonts/arreial.eot') format('embedded-opentype'),
-         url('https://grimmwa.re/files/fonts/arreial.woff2') format('woff2'),
-         url('https://grimmwa.re/files/fonts/arreial.woff') format('woff'),
-         url('https://grimmwa.re/files/fonts/arreial.ttf') format('truetype'),
-         url('https://grimmwa.re/files/fonts/arreial.svg#arreial') format('svg');
+    src: url('{{ site.font_server }}/arreial.eot');
+    src: url('{{ site.font_server }}/arreial.eot') format('embedded-opentype'),
+         url('{{ site.font_server }}/arreial.woff2') format('woff2'),
+         url('{{ site.font_server }}/arreial.woff') format('woff'),
+         url('{{ site.font_server }}/arreial.ttf') format('truetype'),
+         url('{{ site.font_server }}/arreial.svg#arreial') format('svg');
 }
